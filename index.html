@@ -1,275 +1,541 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio | Cléo Diegues</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cléo Diegues | Computational Linguist | AI & Language Data Specialist</title>
+<meta name="description" content="Portfolio of Cléo Diegues, Computational Linguist and AI & Language Data Specialist with 11+ years of experience in conversational AI, NLP, NLU, LLMs, linguistic data curation and AI evaluation.">
+<style>
     :root {
-      --azul: #00b4d8;
-      --azul-escuro: #0077b6;
-      --prata: #adb5bd;
-      --preto: #0a0a0a;
-      --cinza: #1e1e1e;
-      --branco: #f1f1f1;
+        --bg: #111315;
+        --panel: #191c1f;
+        --panel-2: #202428;
+        --blue: #38bdf8;
+        --blue-dark: #0077b6;
+        --silver: #c8d0d8;
+        --text: #f3f5f7;
+        --muted: #aab4be;
+        --line: #30363b;
+        --white: #ffffff;
     }
-    * {
-      box-sizing: border-box;
-    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--cinza);
-      color: var(--branco);
-      line-height: 1.6;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.65;
     }
-    header {
-      background: linear-gradient(90deg, var(--azul-escuro), var(--azul));
-      color: var(--branco);
-      padding: 3rem 1rem;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: var(--prata);
-    }
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: var(--preto);
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-    }
-    h2 {
-      color: var(--azul);
-      border-bottom: 2px solid var(--azul);
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-    }
-    h3 {
-      color: var(--azul);
-      margin-top: 1.5rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    li::marker {
-      color: var(--azul);
-    }
-    p, li {
-      margin: 0.5rem 0;
-    }
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 1rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
+
     a {
-      color: var(--azul);
-      text-decoration: none;
+        color: var(--blue);
+        text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
+
+    a:hover { text-decoration: underline; }
+
+    header {
+        padding: 72px 24px 58px;
+        text-align: center;
+        background:
+            radial-gradient(circle at top, rgba(56,189,248,.12), transparent 42%),
+            linear-gradient(180deg, #15191c 0%, var(--bg) 100%);
+        border-bottom: 1px solid var(--line);
     }
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      .container {
-        padding: 1rem;
-      }
+
+    header h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        letter-spacing: .02em;
     }
-  </style>
+
+    header p {
+        margin: 14px auto 0;
+        max-width: 850px;
+        color: var(--silver);
+        font-size: clamp(1rem, 2vw, 1.25rem);
+    }
+
+    .tagline {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 8px 15px;
+        border: 1px solid rgba(56,189,248,.45);
+        border-radius: 999px;
+        color: var(--blue);
+        font-size: .9rem;
+        letter-spacing: .04em;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(17,19,21,.94);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+    }
+
+    nav .nav-inner {
+        max-width: 1080px;
+        margin: auto;
+        padding: 12px 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    nav a {
+        color: var(--silver);
+        font-size: .88rem;
+    }
+
+    nav a:hover { color: var(--blue); }
+
+    main {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 30px 20px 70px;
+    }
+
+    section {
+        padding: 38px 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    section:last-child { border-bottom: 0; }
+
+    h2 {
+        margin: 0 0 22px;
+        color: var(--white);
+        font-size: 1.65rem;
+    }
+
+    h2::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 25px;
+        margin-right: 11px;
+        vertical-align: -3px;
+        background: var(--blue);
+        border-radius: 4px;
+    }
+
+    h3 {
+        margin: 0 0 8px;
+        color: var(--white);
+        font-size: 1.2rem;
+    }
+
+    p { margin: 0 0 15px; }
+
+    .lead {
+        color: var(--silver);
+        font-size: 1.08rem;
+        max-width: 900px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+    }
+
+    .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 18px;
+    }
+
+    .card strong {
+        color: var(--white);
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .card span { color: var(--muted); }
+
+    .experience {
+        margin-bottom: 24px;
+        padding: 24px;
+        background: linear-gradient(135deg, var(--panel) 0%, var(--panel-2) 100%);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+    }
+
+    .experience:last-child { margin-bottom: 0; }
+
+    .experience.featured {
+        border-color: rgba(56,189,248,.35);
+        box-shadow: 0 8px 35px rgba(0,0,0,.18);
+    }
+
+    .role {
+        color: var(--blue);
+        font-weight: 600;
+        margin-bottom: 14px;
+    }
+
+    .experience ul,
+    .projects ul {
+        margin: 12px 0 0;
+        padding-left: 21px;
+    }
+
+    li { margin-bottom: 8px; color: var(--silver); }
+
+    .highlight {
+        margin-top: 17px;
+        padding: 14px 16px;
+        border-left: 3px solid var(--blue);
+        background: rgba(56,189,248,.06);
+        color: var(--silver);
+    }
+
+    .timeline-label {
+        color: var(--muted);
+        font-size: .9rem;
+        margin-bottom: 10px;
+    }
+
+    .pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+    }
+
+    .pill {
+        padding: 7px 11px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--panel);
+        color: var(--silver);
+        font-size: .88rem;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 14px;
+    }
+
+    .contact a,
+    .contact div {
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--panel);
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px 20px 45px;
+        color: #7f8992;
+        font-size: .85rem;
+    }
+
+    @media (max-width: 650px) {
+        header { padding-top: 52px; }
+        nav .nav-inner { gap: 11px; }
+        .experience { padding: 19px; }
+    }
+</style>
 </head>
+
 <body>
-  <header>
+
+<header id="top">
     <h1>Cléo Diegues</h1>
-    <p>Especialista em Linguística e IA</p>
-  </header>
-  <div class="container">
-    <h2>Contato</h2>
-    <p><strong>Email:</strong> <a href="mailto:cleodiegues@gmail.com">cleodiegues@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/cléo-diegues-62b1b12a/" target="_blank">Visite meu LinkedIn</a></p>
-  </div>
-<h2 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Objetivos</span></font></span></h2>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Atuar
-em projetos inovadores e criativos que unam a ciência da linguística
-e a Inteligência Artificial. Criar produtos de impacto social tais
-como assistentes conversacionais, assistentes para atendimento
-automatizado e afins.</span></font></span></p>
-<h2 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Diferenciais</span></font></span></h2>
-<ul>
-	<li><p style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Curadoria
-	e Análise de Dados não Estruturados; </span></font></span>
-	</p></li>
-	<li><p style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Curso:
-	Search Engine Optimization with Squarespace (Coursera); </span></font></span>
-	</p></li>
-	<li><p style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">PLN,
-	Machine Learning, LLM, IA’s; </span></font></span>
-	</p></li>
-	<li><p style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">UX
-	Writing, Speech to Text; </span></font></span>
-	</p></li>
-	<li><p style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Linguística
-	Teórica e Aplicada; </span></font></span>
-	</p></li>
-	<li><p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Espanhol
-	Avançado. </span></font></span>
-	</p></li>
-</ul>
-<h2 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Formação</span></font></span></h2>
-<p><span style="display: inline-block; border: none; padding: 0cm"><strong><font face="Liberation Serif, serif"><span style="background: transparent">Graduação:</span></font></strong><font face="Liberation Serif, serif"><span style="background: transparent">
-Letras Bacharelado Português-Espanhol.</span></font></span></p>
-<p><span style="display: inline-block; border: none; padding: 0cm"><strong><font face="Liberation Serif, serif"><span style="background: transparent">Mestrado:</span></font></strong><font face="Liberation Serif, serif"><span style="background: transparent">
-Lexicografia, Linguística Computacional;</span></font></span></p>
-<p><span style="display: inline-block; border: none; padding: 0cm"><strong><font face="Liberation Serif, serif"><span style="background: transparent">Pesquisas
-Científicas em:</span></font></strong><font face="Liberation Serif, serif"><span style="background: transparent">
-Terminologia, Fonologia, Transcrição Fonética, Prosódia,
-Morfologia e Sintaxe, Linguística de Corpus, Discurso.</span></font></span></p>
-<h2 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Experiência
-de Trabalho</span></font></span></h2>
-<p><span style="display: inline-block; border: none; padding: 0cm"><strong><font face="Liberation Serif, serif"><span style="background: transparent">LINGUISTA
-COMPUTACIONAL</span></font></strong></span></p>
-<p><span style="display: inline-block; border: none; padding: 0cm"><strong><font face="Liberation Serif, serif"><span style="background: transparent">Empresas
-em que atuei:</span></font></strong><font face="Liberation Serif, serif"><span style="background: transparent">
-Inbenta, Ubots, HardFun, Pagseguro, AskSuite, Zapay, Itaú Unibanco.</span></font></span></p>
-<p><span style="display: inline-block; border: none; padding: 0cm"><strong><font face="Liberation Serif, serif"><span style="background: transparent">Período
-abrangido:</span></font></strong><font face="Liberation Serif, serif"><span style="background: transparent">
-Abril de 2014 - Março de 2025. (11 anos de experiência no setor)</span></font></span></p>
-<p><span style="display: inline-block; border: none; padding: 0cm"><strong><font face="Liberation Serif, serif"><span style="background: transparent">Projetos:</span></font></strong><font face="Liberation Serif, serif"><span style="background: transparent">
-Nas empresas mencionadas acima, tive a oportunidade de atuar no
-desenho de chatbots, acompanhamento via curadoria, criação de
-conteúdos, UX Writing, ajustes de NLU, curadoria para SEO,
-desenvolvimento de relatórios de desempenho para melhoria e outras
-atividades correlatas, bem como na interação direta com clientes de
-empresas como: Oi, Renner, Porto Seguro, Vivo, Gol, Panvel, AGCO,
-Sicredi, Unimed, PagSeguro, Zapay, Itaú, etc.</span></font></span></p>
-<h2 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Liderança
-e Product Owner</span></font></span></h2>
-<ul>
-	<li><p style="margin-bottom: 0cm"><span style="display: inline-block; border: none; padding: 0cm"><strong><font face="Liberation Serif, serif"><span style="background: transparent">Líder
-	Técnica do time de UX Writer e Curadoria na empresa Pagseguro.</span></font></strong><font face="Liberation Serif, serif"><span style="background: transparent">
-	(Agosto de 2020 - Agosto de 2021). </span></font></span>
-	</p></li>
-	<li><p><span style="display: inline-block; border: none; padding: 0cm"><strong><font face="Liberation Serif, serif"><span style="background: transparent">PO
-	e Linguista do time de Chatbots da Empresa Zapay.</span></font></strong><font face="Liberation Serif, serif"><span style="background: transparent">
-	(Novembro de 2021 - fevereiro de 2023). </span></font></span>
-	</p></li>
-</ul>
-<h2 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Treinamentos</span></font></span></h2>
-<p><span style="display: inline-block; border: none; padding: 0cm"><strong><font face="Liberation Serif, serif"><span style="background: transparent">Linguista
-Computacional</span></font></strong></span></p>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Junho
-de 2014 (Sunnyvalle, Califórnia); Dezembro de 2016 (Barcelona,
-Espanha)</span></font></span></p>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Nestes
-dois treinamentos, em que cada um durou 1 mês, tive a oportunidade
-de aprofundar, junto a linguistas e desenvolvedores, conhecimentos
-sobre Machine Learning, PLN, NLU, Análise de Dados.</span></font></span></p>
-<h2 class="western" align="center"><span style="display: inline-block; border: none; padding: 0cm"><font color="#04118c"><font face="Liberation Serif, serif"><span style="background: transparent">Projetos
-de Destaque</span></font></font></span></h2>
-<h3 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><u><span style="background: transparent">OI
-Telecomunicações</span></u></font></font></span></h3>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Destaca-se
-pelo trabalho de curadoria de conteúdos que realizei. Diante do
-desafio de atuar com uma grande quantidade de FAQs de temas
-semelhantes, era fundamental aplicar conhecimentos de Arquitetura da
-Informação para gestão desses conteúdos e o correto funcionamento
-em IA baseada em Machine Learning.</span></font></span></p>
-<h3 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><u><span style="background: transparent">GOL
-Companhia Aérea</span></u></font></font></span></h3>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Destaca-se
-por ser um dos primeiros chatbots com avatar no Brasil. Atuei no
-desenho da persona do avatar, pesquisa de público-alvo, curadoria de
-conversas, desenho de funcionalidades dentro do chat e análise de
-dados textuais e métricas de desempenho.</span></font></span></p>
-<h3 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><u><span style="background: transparent">NET
-Canais a Cabo</span></u></font></font></span></h3>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Destaca-se
-pela complexidade de gestão de SEO que iria ser processado pelo
-Machine Learning para apresentação no assistente de busca interno
-do site da NET. Nesse projeto, tive a oportunidade de trabalhar na
-gestão dos conteúdos de SEO, aprofundando meu conhecimento sobre o
-mesmo.</span></font></span></p>
-<h3 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><u><span style="background: transparent">Renner</span></u></font></font></span></h3>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Destaca-se
-no que tange à curadoria de conversas. A análise dos dados textuais
-tinha um grande enfoque na captação de novas oportunidades de
-negócio para a empresa. Desta forma, a atividade de curadoria também
-enriquecia o acervo de produtos oferecidos pela empresa.</span></font></span></p>
-<h3 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><u><span style="background: transparent">Sicredi</span></u></font></font></span></h3>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Destaca-se
-pela intensa curadoria de conversas realizada para o produto Woop.
-Diante desse trabalho minucioso, fomos capazes de superar os
-resultados do concorrente que, na ocasião, era o Watson. A análise
-de dados textuais foi fundamental para entendimento do público-alvo
-e ajuste do Assistente Conversacional para que este contivesse os
-recursos que resolveriam a demanda do usuário com precisão. Nesse
-projeto, alcançamos 95% de resolutividade e corretude.</span></font></span></p>
-<h3 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><u><span style="background: transparent">Panvel
-Farmácias</span></u></font></font></span></h3>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Destaca-se
-pelo trabalho minucioso de curadoria de conversas e integração
-entre diferentes assistentes conversacionais. Esse projeto contava
-com diferentes assistentes alocados no app, site, telefone e estes
-deveriam estar atuando em sincronia de modo a não quebrar a
-interação do cliente. O ponto alto foi o trabalho realizado no
-fluxograma de atendimento e no desenho de funcionamento desses
-assistentes.</span></font></span></p>
-<h3 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><u><span style="background: transparent">Vivo
-Telecomunicações</span></u></font></font></span></h3>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Destaca-se
-por seu caráter internacional assistente que atuava em língua
-espanhola. Atuei na Vivo da Espanha, realizando um trabalho minucioso
-de mapeamento de terminologias, bem como de curadoria de Inteligência
-Artificial, criando grandes glossários para implementação no
-Machine Learning.</span></font></span></p>
-<h3 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><u><span style="background: transparent">PagSeguro</span></u></font></font></span></h3>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Destaca-se
-por ser um projeto inédito em soluções de curadoria linguística,
-análise de intenções e entidades, refinamento de UX Writing. Tive
-a oportunidade de assumir a liderança técnica da área de Linguagem
-e Escrita, em que atuei fortemente nos ajustes linguísticos
-necessários para melhor funcionamento da IA do Rasa.</span></font></span></p>
-<h3 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><u><span style="background: transparent">Asksuite</span></u></font></font></span></h3>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Destaca-se
-por ser um trabalho feito tanto para Assistentes em espanhol como em
-português. A partir de um bot central, geríamos especificidades em
-mais de 600 projetos diferentes para cada idioma, criando sub-bots
-para cada nova empresa e, assim registrando a especificidade de cada
-um deles. Além disso, essa solução unia a plataforma do Dialogflow
-com os recursos do Rasa.</span></font></span></p>
-<h3 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><u><span style="background: transparent">Zapay</span></u></font></font></span></h3>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Destaca-se
-por meu papel como Product Owner do time de chatbots em que tive a
-oportunidade de aprender mais sobre a área de negócios e aplicar
-meus conhecimentos técnicos junto ao time que era composto por
-desenvolvedores, analistas de dados e UX Writers.</span></font></span></p>
-<h3 class="western"><span style="display: inline-block; border: none; padding: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><u><span style="background: transparent">Itaú-Unibanco</span></u></font></font></span></h3>
-<p><span style="display: inline-block; border: none; padding: 0cm"><font face="Liberation Serif, serif"><span style="background: transparent">Destaca-se
-pelo espaço de inovação na área de IA Generativa e no
-desenvolvimento de métricas e indicadores de desempenho para
-assistentes conversacionais LLM. Além ditos, pude desenvolver e
-aplicar meus conhecimento de prompt design. Tive a oportunidade de
-atuar em dois grandes projetos internos para implementação do
-processo de Curadoria de IA LLM.</span></font></span></p>
+    <p>Computational Linguist | AI &amp; Language Data Specialist</p>
+    <div class="tagline">Language • AI • Linguistic Data • Conversational Systems</div>
+</header>
+
+<nav>
+    <div class="nav-inner">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Selected Work</a>
+        <a href="#education">Education</a>
+        <a href="#international">International</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<main>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p class="lead">
+        I am a Brazilian Computational Linguist and AI &amp; Language Data Specialist with
+        more than 11 years of experience working with language technologies, conversational
+        AI and linguistic data.
+    </p>
+    <p>
+        My professional experience combines Linguistics with NLP, NLU, LLMs, speech-to-text,
+        conversational systems, linguistic data curation, prompt design, UX Writing and
+        AI quality evaluation.
+    </p>
+    <p>
+        I have worked on AI projects for large organizations, translating linguistic
+        knowledge into practical methodologies for data curation, content quality,
+        conversational performance and AI-assisted analysis.
+    </p>
+    <p>
+        My academic background in Portuguese and Spanish, together with research and training
+        in phonology, phonetic transcription, prosody, corpus linguistics, morphology,
+        syntax, terminology and discourse analysis, gives me a strong foundation for
+        working with human language as structured data.
+    </p>
+</section>
+
+<section id="expertise">
+    <h2>Linguistics &amp; AI Expertise</h2>
+    <div class="pill-list">
+        <span class="pill">Computational Linguistics</span>
+        <span class="pill">Portuguese Language</span>
+        <span class="pill">Phonetics &amp; Phonology</span>
+        <span class="pill">Phonetic Transcription</span>
+        <span class="pill">Prosody</span>
+        <span class="pill">Corpus Linguistics</span>
+        <span class="pill">NLP</span>
+        <span class="pill">NLU</span>
+        <span class="pill">LLMs</span>
+        <span class="pill">Generative AI</span>
+        <span class="pill">Speech-to-Text</span>
+        <span class="pill">Linguistic Data Curation</span>
+        <span class="pill">Intent &amp; Entity Classification</span>
+        <span class="pill">AI Output Evaluation</span>
+        <span class="pill">Prompt Design</span>
+        <span class="pill">Conversational AI</span>
+        <span class="pill">Language Quality Analysis</span>
+        <span class="pill">UX Writing</span>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Selected Professional Experience</h2>
+
+    <article class="experience featured">
+        <div class="timeline-label">IBM</div>
+        <h3>Conversational AI / Computational Linguistics</h3>
+        <div class="role">Client: DASA • Watson V2 • Real-Time Curation</div>
+
+        <p>
+            Worked on a conversational AI project for <strong>DASA</strong>, as part of a
+            real-time curation team responsible for monitoring and improving the linguistic
+            behavior of the assistant.
+        </p>
+
+        <ul>
+            <li>Worked with <strong>IBM Watson V2</strong> in a conversational AI environment.</li>
+            <li>Worked with <strong>Java and JSON</strong> in the context of the conversational system and its data structures.</li>
+            <li>Used IBM's <strong>logging system</strong> to monitor conversational behavior and investigate interaction data.</li>
+            <li>Worked as part of a <strong>real-time curation team</strong>, analyzing live conversational data and applying linguistic adjustments.</li>
+            <li>Combined linguistic analysis with technical information from the system to support improvements in conversational performance and response quality.</li>
+        </ul>
+
+        <div class="highlight">
+            This experience connected linguistic curation, technical system data and real-time
+            conversational monitoring in a production AI environment.
+        </div>
+    </article>
+
+    <article class="experience featured">
+        <div class="timeline-label">Itaú Unibanco</div>
+        <h3>LLM Specialist &amp; Prompt Designer</h3>
+        <div class="role">LLM Curation • AI Content Methodology • Voice Conversation Analysis</div>
+
+        <p>
+            Worked with Generative AI and LLM-related initiatives, developing linguistic
+            methodologies for the curation and analysis of AI-generated and conversational
+            content.
+        </p>
+
+        <ul>
+            <li>Created a <strong>content curation methodology</strong> for assistants supporting <strong>Business Banking (PJ) relationship managers</strong>.</li>
+            <li>Worked with <strong>LLMs</strong> to structure, curate and improve content intended for AI-assisted interactions.</li>
+            <li>Developed criteria and processes for maintaining linguistic and content quality in AI assistants.</li>
+            <li>Worked as a <strong>Prompt Designer</strong> for the analysis of voice/telephone customer-service conversations.</li>
+            <li>Designed prompts and analysis approaches for processing and interpreting conversation data from <strong>Itaú's telephone customer service at scale</strong>.</li>
+            <li>Applied linguistic knowledge to the analysis of natural language in real customer-service interactions.</li>
+        </ul>
+
+        <div class="highlight">
+            The role combined LLMs, prompt design, linguistic methodology and large-scale
+            analysis of real customer-service conversations.
+        </div>
+    </article>
+
+    <article class="experience">
+        <div class="timeline-label">PagSeguro</div>
+        <h3>Technical Lead</h3>
+        <div class="role">Conversational Assistant • UX Writing • AI Evaluation</div>
+
+        <ul>
+            <li>Led a UX Writing team responsible for a Conversational Assistant across WhatsApp, website and mobile app.</li>
+            <li>Worked on FAQ and transactional conversational features.</li>
+            <li>Participated in the development of a new intent and entity classification system for NLU.</li>
+            <li>Contributed to an internal AI data curation and linguistic fine-tuning tool.</li>
+            <li>Analyzed conversation logs and unstructured data to improve AI response quality, textual clarity, usability and UX.</li>
+            <li>Worked with AI evaluation metrics and KPIs.</li>
+        </ul>
+    </article>
+
+    <article class="experience">
+        <div class="timeline-label">Zapay</div>
+        <h3>Product Owner</h3>
+        <div class="role">Conversational AI • NLU • Linguistic Data • Product Leadership</div>
+
+        <ul>
+            <li>Led a multidisciplinary chatbot team involving developers, data analysts and UX Writers.</li>
+            <li>Redefined entity classes, intents and regular expressions for NLU.</li>
+            <li>Worked with intent and entity ontologies, content classification and AI performance metrics.</li>
+            <li>Worked with RASA and WhatsApp orchestration.</li>
+            <li>Analyzed user data to identify conversational friction and opportunities for improvement.</li>
+            <li>Worked with Scrum, Kanban and Jira while mentoring team members.</li>
+        </ul>
+    </article>
+
+    <article class="experience">
+        <div class="timeline-label">Inbenta, Ubots and other conversational AI projects</div>
+        <h3>Computational Linguistics &amp; Conversational AI</h3>
+        <div class="role">NLP • NLU • Data Curation • UX Writing • AI Optimization</div>
+
+        <ul>
+            <li>More than a decade working with conversational assistants and language technologies.</li>
+            <li>Designed conversational flows and structured linguistic data for automated customer service systems.</li>
+            <li>Worked with NLU, NLP, LLM-related technologies, content management and conversational performance analysis.</li>
+            <li>Worked on projects involving major organizations including Vivo, GOL, Oi, Renner, Porto Seguro, Panvel, Sicredi and Unimed, among others.</li>
+        </ul>
+    </article>
+</section>
+
+<section id="projects">
+    <h2>Selected Work &amp; Applications</h2>
+
+    <div class="grid projects">
+        <div class="card">
+            <strong>Real-Time AI Curation</strong>
+            <span>Live conversational monitoring, linguistic analysis, log investigation and real-time curation in a Watson V2 environment.</span>
+        </div>
+
+        <div class="card">
+            <strong>LLM Content Curation</strong>
+            <span>Methodology for curating content used by AI assistants supporting Business Banking relationship managers.</span>
+        </div>
+
+        <div class="card">
+            <strong>Prompt Design for Voice Analysis</strong>
+            <span>Prompt-based analysis of customer-service conversations conducted through telephone channels at large scale.</span>
+        </div>
+
+        <div class="card">
+            <strong>Linguistic Data Curation</strong>
+            <span>Intent/entity classification, structured linguistic data, content quality and conversational optimization.</span>
+        </div>
+
+        <div class="card">
+            <strong>AI Output Evaluation</strong>
+            <span>Analysis of conversational logs and AI responses to identify quality, usability and linguistic improvement opportunities.</span>
+        </div>
+
+        <div class="card">
+            <strong>Conversational UX</strong>
+            <span>Conversation flows, UX Writing, content strategy and language quality for automated customer-service experiences.</span>
+        </div>
+    </div>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+
+    <article class="experience">
+        <div class="timeline-label">Universidade Federal do Rio Grande do Sul (UFRGS)</div>
+        <h3>Master's Degree in Lexical Linguistic Theories</h3>
+        <p>
+            Academic focus including <strong>Terminology, Phonology, Phonetic Transcription,
+            Prosody, Morphology &amp; Syntax, Corpus Linguistics and Discourse Analysis</strong>.
+        </p>
+    </article>
+
+    <article class="experience">
+        <div class="timeline-label">Universidade Federal do Rio Grande do Sul (UFRGS)</div>
+        <h3>Bachelor's Degree in Letters — Portuguese &amp; Spanish</h3>
+        <p>
+            Academic training in language, linguistics, Portuguese and Spanish.
+        </p>
+    </article>
+
+    <div class="grid">
+        <div class="card">
+            <strong>Additional Training</strong>
+            <span>Computational Linguistics • Generative AI • UX Research • Cognitive Linguistics • Cognitive Psychology Applied to UX • SEO</span>
+        </div>
+        <div class="card">
+            <strong>Professional Certifications</strong>
+            <span>Generative AI Practitioner • Leadership in Data &amp; Analytics • UX Research &amp; Cognitive Linguistics • SEO</span>
+        </div>
+    </div>
+</section>
+
+<section id="international">
+    <h2>International Experience</h2>
+
+    <div class="grid">
+        <div class="card">
+            <strong>Sunnyvale, California, USA</strong>
+            <span>Professional training in AI / conversational assistant technologies.</span>
+        </div>
+        <div class="card">
+            <strong>Barcelona, Spain</strong>
+            <span>Professional training in virtual assistants and conversational technologies.</span>
+        </div>
+    </div>
+</section>
+
+<section id="languages">
+    <h2>Languages</h2>
+
+    <div class="grid">
+        <div class="card">
+            <strong>Portuguese</strong>
+            <span>Native</span>
+        </div>
+        <div class="card">
+            <strong>Spanish</strong>
+            <span>Advanced / Fluent</span>
+        </div>
+        <div class="card">
+            <strong>English</strong>
+            <span>Intermediate</span>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <div class="contact">
+        <a href="mailto:cleodiegues@hotmail.com">cleodiegues@hotmail.com</a>
+        <a href="https://www.linkedin.com/in/cl%C3%A9o-diegues-62b1b12a/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/cleosouzadiegues" target="_blank" rel="noopener">GitHub</a>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>Cléo Diegues • Computational Linguist • AI &amp; Language Data Specialist</p>
+</footer>
+
 </body>
 </html>
